@@ -11,8 +11,12 @@ grep ' 43' /tmp/$$.dclist | wc -l
 echo -n "$1 Non Net 43 DCs: "
 grep -v ' 43' /tmp/$$.dclist | wc -l 
 
-cat /tmp/$$.dclist
-rm /tmp/$$.dclist
+echo -n "$1 IPv6 DCs: "
+grep -v ':' /tmp/$$.dclist | wc -l 
+
+
+#cat /tmp/$$.dclist
+##rm /tmp/$$.dclist
 
 
 
